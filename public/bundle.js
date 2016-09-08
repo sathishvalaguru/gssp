@@ -29124,6 +29124,7 @@
 				fetch('/api/customers').then(function (response) {
 					return response.json();
 				}).then(function (response) {
+					console.log(response);
 					_this2.setState({ customers: response });
 				}).catch(function (err) {
 					console.log(err);
@@ -29175,7 +29176,7 @@
 							'tbody',
 							null,
 							this.state.customers.map(function (person, i) {
-								return _react2.default.createElement(Row, { key: i, data: person });
+								return _react2.default.createElement(Row, { key: i, data: person.doc });
 							})
 						)
 					),
@@ -29351,7 +29352,7 @@
 					console.log(response);
 					return response.json();
 				}).then(function (response) {
-					location = "/#/customers/" + response._id;
+					location = "/#/customers/" + response.id;
 				}).catch(function (err) {
 					console.log(err);
 				});
@@ -29775,7 +29776,7 @@
 					console.log(response);
 					return response.json();
 				}).then(function (response) {
-					location = "/#/customers/" + response._id;
+					location = "/#/customers/" + response.id;
 				}).catch(function (err) {
 					console.log(err);
 				});

@@ -64,7 +64,7 @@ export default class EditCustomer extends React.Component {
 			console.log(response);
 			return response.json();
 		}).then(response => {
-			location = "/#/customers/" + response._id;
+			location = "/#/customers/" + response.id;
 		}).catch(err => {
 			console.log(err)
 		});

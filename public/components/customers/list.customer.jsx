@@ -16,6 +16,7 @@ export default class Customers extends React.Component {
 		fetch('/api/customers').then(response => {
 			return response.json();
 		}).then(response => {
+		console.log(response);
 			this.setState({customers:response});
 		}).catch(err => {
 			console.log(err)
@@ -36,7 +37,7 @@ export default class Customers extends React.Component {
 					</tr>
 				</thead>
 				<tbody>
-					{this.state.customers.map((person, i) => <Row key = {i} data = {person} />)}
+					{this.state.customers.map((person, i) => <Row key = {i} data = {person.doc} />)}
 
 				</tbody>
 			</table>
