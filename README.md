@@ -1,4 +1,4 @@
-<h3>[Simple REST API - NodeJs, Express, MongoDB/Cloudant and ReatJs]</h3>
+<h3>[Simple REST API - NodeJs, Express, MongoDB/Cloudant and ReactJs]</h3>
 <p>Run below commands</p>
 
 => npm install
