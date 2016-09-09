@@ -1,31 +1,31 @@
 var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema;
 
 var CustomerSchema = new Schema({
-	firstName: {
-		type: String,
-		default: '',
-		trim: true
-	},
-	lastName: {
-		type: String,
-		default: '',
-		trim: true
-	},
-	email: {
-		type: String,
-		default: '',
-		trim: true
-	},
-	phone: {
-		type: String,
-		default: '',
-		trim: true
-	},
-	created: {
-		type: Date,
-		default: Date.now
-	},
+  firstName: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  lastName: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  email: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  phone: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  created: {
+    type: Date,
+    default: Date.now
+  },
 });
 
 mongoose.model('Customer', CustomerSchema);

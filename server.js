@@ -1,13 +1,13 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var mongoose = require('./server/config/mongoose'),
-	express = require('./server/config/express'),
-	cloudant = require('./server/config/cloudant');
+  express = require('./server/config/express'),
+  cloudant = require('./server/config/cloudant');
 //passport = require('./config/passport');
 
 var db = mongoose(),
-	cdb = cloudant(),
-	app = express();
+  cdb = cloudant(),
+  app = express();
 //var passport = passport();
 
 app.listen(3000);

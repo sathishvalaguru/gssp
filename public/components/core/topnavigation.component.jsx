@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class TopNavigation extends React.Component {
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <div className="navbar navbar-default" role="navigation">
             <div className="container">

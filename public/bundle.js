@@ -76,25 +76,25 @@
 
 	var _reactRouter = __webpack_require__(258);
 
-	var _App = __webpack_require__(321);
+	var _app = __webpack_require__(321);
 
-	var _App2 = _interopRequireDefault(_App);
+	var _app2 = _interopRequireDefault(_app);
 
-	var _listCustomer = __webpack_require__(325);
+	var _listCustomerComponent = __webpack_require__(325);
 
-	var _listCustomer2 = _interopRequireDefault(_listCustomer);
+	var _listCustomerComponent2 = _interopRequireDefault(_listCustomerComponent);
 
-	var _createCustomer = __webpack_require__(326);
+	var _createCustomerComponent = __webpack_require__(326);
 
-	var _createCustomer2 = _interopRequireDefault(_createCustomer);
+	var _createCustomerComponent2 = _interopRequireDefault(_createCustomerComponent);
 
-	var _viewCustomer = __webpack_require__(329);
+	var _viewCustomerComponent = __webpack_require__(329);
 
-	var _viewCustomer2 = _interopRequireDefault(_viewCustomer);
+	var _viewCustomerComponent2 = _interopRequireDefault(_viewCustomerComponent);
 
-	var _editCustomer = __webpack_require__(330);
+	var _editCustomerComponent = __webpack_require__(330);
 
-	var _editCustomer2 = _interopRequireDefault(_editCustomer);
+	var _editCustomerComponent2 = _interopRequireDefault(_editCustomerComponent);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -103,78 +103,80 @@
 
 	// Customers
 	var Home = function (_React$Component) {
-		(0, _inherits3.default)(Home, _React$Component);
+	  (0, _inherits3.default)(Home, _React$Component);
 
-		function Home() {
-			(0, _classCallCheck3.default)(this, Home);
-			return (0, _possibleConstructorReturn3.default)(this, (Home.__proto__ || (0, _getPrototypeOf2.default)(Home)).apply(this, arguments));
-		}
+	  function Home() {
+	    (0, _classCallCheck3.default)(this, Home);
+	    return (0, _possibleConstructorReturn3.default)(this, (Home.__proto__ || (0, _getPrototypeOf2.default)(Home)).apply(this, arguments));
+	  }
 
-		(0, _createClass3.default)(Home, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'h1',
-					null,
-					'Home Page'
-				);
-			}
-		}]);
-		return Home;
+	  (0, _createClass3.default)(Home, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'h1',
+	        null,
+	        'Home Page'
+	      );
+	    }
+	  }]);
+	  return Home;
 	}(_react2.default.Component);
 
 	// Main Layout
 
 
 	var InputText = function (_React$Component2) {
-		(0, _inherits3.default)(InputText, _React$Component2);
+	  (0, _inherits3.default)(InputText, _React$Component2);
 
-		function InputText(props) {
-			(0, _classCallCheck3.default)(this, InputText);
+	  function InputText(props) {
+	    (0, _classCallCheck3.default)(this, InputText);
 
-			var _this2 = (0, _possibleConstructorReturn3.default)(this, (InputText.__proto__ || (0, _getPrototypeOf2.default)(InputText)).call(this, props));
+	    var _this2 = (0, _possibleConstructorReturn3.default)(this, (InputText.__proto__ || (0, _getPrototypeOf2.default)(InputText)).call(this, props));
 
-			_this2.state = {
-				value: ""
-			};
+	    _this2.state = {
+	      value: ""
+	    };
 
-			_this2.handleChange = _this2.handleChange.bind(_this2);
-			return _this2;
-		}
+	    _this2.handleChange = _this2.handleChange.bind(_this2);
+	    return _this2;
+	  }
 
-		(0, _createClass3.default)(InputText, [{
-			key: 'handleChange',
-			value: function handleChange(e) {
-				this.setState({ value: e.target.value });
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement('input', { type: 'text', className: 'form-control', name: this.props.name, value: this.props.value, onChange: this.handleChange });
-			}
-		}]);
-		return InputText;
+	  (0, _createClass3.default)(InputText, [{
+	    key: 'handleChange',
+	    value: function handleChange(e) {
+	      this.setState({
+	        value: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement('input', { type: 'text', className: 'form-control', name: this.props.name, value: this.props.value, onChange: this.handleChange });
+	    }
+	  }]);
+	  return InputText;
 	}(_react2.default.Component);
 
 	// Init and Route
 
 
 	_reactDom2.default.render(_react2.default.createElement(
-		_reactRouter.Router,
-		{ history: _reactRouter.hashHistory },
-		_react2.default.createElement(
-			_reactRouter.Route,
-			{ path: '/', component: _App2.default },
-			_react2.default.createElement(_reactRouter.IndexRoute, { component: Home }),
-			_react2.default.createElement(
-				_reactRouter.Route,
-				{ path: 'customers' },
-				_react2.default.createElement(_reactRouter.IndexRoute, { component: _listCustomer2.default }),
-				_react2.default.createElement(_reactRouter.Route, { path: '/customers/create', component: _createCustomer2.default }),
-				_react2.default.createElement(_reactRouter.Route, { path: '/customers/:customerId', component: _viewCustomer2.default }),
-				_react2.default.createElement(_reactRouter.Route, { path: '/customers/:customerId/edit', component: _editCustomer2.default })
-			)
-		)
+	  _reactRouter.Router,
+	  { history: _reactRouter.hashHistory },
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: '/', component: _app2.default },
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: Home }),
+	    _react2.default.createElement(
+	      _reactRouter.Route,
+	      { path: 'customers' },
+	      _react2.default.createElement(_reactRouter.IndexRoute, { component: _listCustomerComponent2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '/customers/create', component: _createCustomerComponent2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '/customers/:customerId', component: _viewCustomerComponent2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '/customers/:customerId/edit', component: _editCustomerComponent2.default })
+	    )
+	  )
 	), document.getElementById('root'));
 
 /***/ },
@@ -28736,7 +28738,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	   value: true
+	  value: true
 	});
 
 	var _getPrototypeOf = __webpack_require__(1);
@@ -28769,45 +28771,45 @@
 
 	var _reactRouter = __webpack_require__(258);
 
-	var _header = __webpack_require__(322);
+	var _headerComponent = __webpack_require__(322);
 
-	var _header2 = _interopRequireDefault(_header);
+	var _headerComponent2 = _interopRequireDefault(_headerComponent);
 
-	var _footer = __webpack_require__(324);
+	var _footerComponent = __webpack_require__(324);
 
-	var _footer2 = _interopRequireDefault(_footer);
+	var _footerComponent2 = _interopRequireDefault(_footerComponent);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var App = function (_React$Component) {
-	   (0, _inherits3.default)(App, _React$Component);
+	  (0, _inherits3.default)(App, _React$Component);
 
-	   function App() {
-	      (0, _classCallCheck3.default)(this, App);
-	      return (0, _possibleConstructorReturn3.default)(this, (App.__proto__ || (0, _getPrototypeOf2.default)(App)).apply(this, arguments));
-	   }
+	  function App() {
+	    (0, _classCallCheck3.default)(this, App);
+	    return (0, _possibleConstructorReturn3.default)(this, (App.__proto__ || (0, _getPrototypeOf2.default)(App)).apply(this, arguments));
+	  }
 
-	   (0, _createClass3.default)(App, [{
-	      key: 'render',
-	      value: function render() {
-	         return _react2.default.createElement(
+	  (0, _createClass3.default)(App, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_headerComponent2.default, null),
+	        _react2.default.createElement(
+	          'main',
+	          null,
+	          _react2.default.createElement(
 	            'div',
-	            null,
-	            _react2.default.createElement(_header2.default, null),
-	            _react2.default.createElement(
-	               'main',
-	               null,
-	               _react2.default.createElement(
-	                  'div',
-	                  { className: 'container' },
-	                  this.props.children
-	               )
-	            ),
-	            _react2.default.createElement(_footer2.default, null)
-	         );
-	      }
-	   }]);
-	   return App;
+	            { className: 'container' },
+	            this.props.children
+	          )
+	        ),
+	        _react2.default.createElement(_footerComponent2.default, null)
+	      );
+	    }
+	  }]);
+	  return App;
 	}(_react2.default.Component);
 
 	exports.default = App;
@@ -28850,9 +28852,9 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _topnavigation = __webpack_require__(323);
+	var _topnavigationComponent = __webpack_require__(323);
 
-	var _topnavigation2 = _interopRequireDefault(_topnavigation);
+	var _topnavigationComponent2 = _interopRequireDefault(_topnavigationComponent);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28870,7 +28872,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_topnavigation2.default, null)
+	        _react2.default.createElement(_topnavigationComponent2.default, null)
 	      );
 	    }
 	  }]);
@@ -29066,7 +29068,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _getPrototypeOf = __webpack_require__(1);
@@ -29102,97 +29104,97 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Customers = function (_React$Component) {
-		(0, _inherits3.default)(Customers, _React$Component);
+	  (0, _inherits3.default)(Customers, _React$Component);
 
-		function Customers(props) {
-			(0, _classCallCheck3.default)(this, Customers);
+	  function Customers(props) {
+	    (0, _classCallCheck3.default)(this, Customers);
 
-			var _this = (0, _possibleConstructorReturn3.default)(this, (Customers.__proto__ || (0, _getPrototypeOf2.default)(Customers)).call(this, props));
+	    var _this = (0, _possibleConstructorReturn3.default)(this, (Customers.__proto__ || (0, _getPrototypeOf2.default)(Customers)).call(this, props));
 
-			_this.state = {
-				customers: []
-			};
+	    _this.state = {
+	      customers: []
+	    };
+	    return _this;
+	  }
 
-			return _this;
-		}
+	  (0, _createClass3.default)(Customers, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
 
-		(0, _createClass3.default)(Customers, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				var _this2 = this;
-
-				fetch('/api/customers').then(function (response) {
-					return response.json();
-				}).then(function (response) {
-					console.log(response);
-					_this2.setState({ customers: response });
-				}).catch(function (err) {
-					console.log(err);
-				});
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'section',
-					null,
-					_react2.default.createElement(
-						'h1',
-						null,
-						'Customers'
-					),
-					_react2.default.createElement(
-						'table',
-						{ className: 'table table-striped' },
-						_react2.default.createElement(
-							'thead',
-							null,
-							_react2.default.createElement(
-								'tr',
-								null,
-								_react2.default.createElement(
-									'th',
-									null,
-									'Firstname'
-								),
-								_react2.default.createElement(
-									'th',
-									null,
-									'Lastname'
-								),
-								_react2.default.createElement(
-									'th',
-									null,
-									'Email'
-								),
-								_react2.default.createElement(
-									'th',
-									null,
-									'Phone'
-								)
-							)
-						),
-						_react2.default.createElement(
-							'tbody',
-							null,
-							this.state.customers.map(function (person, i) {
-								return _react2.default.createElement(Row, { key: i, data: person.doc });
-							})
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						null,
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: '/customers/create', className: 'btn btn-primary', activeClassName: 'active' },
-							'Create Customer'
-						)
-					)
-				);
-			}
-		}]);
-		return Customers;
+	      fetch('/api/customers').then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        _this2.setState({
+	          customers: response
+	        });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Customers'
+	        ),
+	        _react2.default.createElement(
+	          'table',
+	          { className: 'table table-striped' },
+	          _react2.default.createElement(
+	            'thead',
+	            null,
+	            _react2.default.createElement(
+	              'tr',
+	              null,
+	              _react2.default.createElement(
+	                'th',
+	                null,
+	                'Firstname'
+	              ),
+	              _react2.default.createElement(
+	                'th',
+	                null,
+	                'Lastname'
+	              ),
+	              _react2.default.createElement(
+	                'th',
+	                null,
+	                'Email'
+	              ),
+	              _react2.default.createElement(
+	                'th',
+	                null,
+	                'Phone'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'tbody',
+	            null,
+	            this.state.customers.map(function (person, i) {
+	              return _react2.default.createElement(Row, { key: i, data: person.doc });
+	            })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/customers/create', className: 'btn btn-primary', activeClassName: 'active' },
+	            'Create Customer'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	  return Customers;
 	}(_react2.default.Component);
 
 	//Rows
@@ -29201,47 +29203,47 @@
 	exports.default = Customers;
 
 	var Row = function (_React$Component2) {
-		(0, _inherits3.default)(Row, _React$Component2);
+	  (0, _inherits3.default)(Row, _React$Component2);
 
-		function Row() {
-			(0, _classCallCheck3.default)(this, Row);
-			return (0, _possibleConstructorReturn3.default)(this, (Row.__proto__ || (0, _getPrototypeOf2.default)(Row)).apply(this, arguments));
-		}
+	  function Row() {
+	    (0, _classCallCheck3.default)(this, Row);
+	    return (0, _possibleConstructorReturn3.default)(this, (Row.__proto__ || (0, _getPrototypeOf2.default)(Row)).apply(this, arguments));
+	  }
 
-		(0, _createClass3.default)(Row, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'tr',
-					null,
-					_react2.default.createElement(
-						'td',
-						null,
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: "/customers/" + this.props.data._id },
-							this.props.data.firstName
-						)
-					),
-					_react2.default.createElement(
-						'td',
-						null,
-						this.props.data.lastName
-					),
-					_react2.default.createElement(
-						'td',
-						null,
-						this.props.data.email
-					),
-					_react2.default.createElement(
-						'td',
-						null,
-						this.props.data.phone
-					)
-				);
-			}
-		}]);
-		return Row;
+	  (0, _createClass3.default)(Row, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'tr',
+	        null,
+	        _react2.default.createElement(
+	          'td',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: "/customers/" + this.props.data._id },
+	            this.props.data.firstName
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'td',
+	          null,
+	          this.props.data.lastName
+	        ),
+	        _react2.default.createElement(
+	          'td',
+	          null,
+	          this.props.data.email
+	        ),
+	        _react2.default.createElement(
+	          'td',
+	          null,
+	          this.props.data.phone
+	        )
+	      );
+	    }
+	  }]);
+	  return Row;
 	}(_react2.default.Component);
 
 /***/ },
@@ -29251,7 +29253,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _stringify = __webpack_require__(327);
@@ -29291,147 +29293,152 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var CreateCustomer = function (_React$Component) {
-		(0, _inherits3.default)(CreateCustomer, _React$Component);
+	  (0, _inherits3.default)(CreateCustomer, _React$Component);
 
-		function CreateCustomer(props) {
-			(0, _classCallCheck3.default)(this, CreateCustomer);
+	  function CreateCustomer(props) {
+	    (0, _classCallCheck3.default)(this, CreateCustomer);
 
-			var _this = (0, _possibleConstructorReturn3.default)(this, (CreateCustomer.__proto__ || (0, _getPrototypeOf2.default)(CreateCustomer)).call(this, props));
+	    var _this = (0, _possibleConstructorReturn3.default)(this, (CreateCustomer.__proto__ || (0, _getPrototypeOf2.default)(CreateCustomer)).call(this, props));
 
-			_this.state = {
-				firstName: '',
-				lastName: '',
-				email: '',
-				phone: ''
-			};
-			_this.onFirstNameChange = _this.onFirstNameChange.bind(_this);
-			_this.onLastNameChange = _this.onLastNameChange.bind(_this);
-			_this.onEmailChange = _this.onEmailChange.bind(_this);
-			_this.onPhoneChange = _this.onPhoneChange.bind(_this);
-			_this.onCreateCustomer = _this.onCreateCustomer.bind(_this);
-			return _this;
-		}
+	    _this.state = {
+	      firstName: '',
+	      lastName: '',
+	      email: '',
+	      phone: ''
+	    };
+	    _this.onFirstNameChange = _this.onFirstNameChange.bind(_this);
+	    _this.onLastNameChange = _this.onLastNameChange.bind(_this);
+	    _this.onEmailChange = _this.onEmailChange.bind(_this);
+	    _this.onPhoneChange = _this.onPhoneChange.bind(_this);
+	    _this.onCreateCustomer = _this.onCreateCustomer.bind(_this);
+	    return _this;
+	  }
 
-		(0, _createClass3.default)(CreateCustomer, [{
-			key: 'onFirstNameChange',
-			value: function onFirstNameChange(e) {
-				this.setState({ firstName: e.target.value });
-			}
-		}, {
-			key: 'onLastNameChange',
-			value: function onLastNameChange(e) {
-				this.setState({ lastName: e.target.value });
-			}
-		}, {
-			key: 'onEmailChange',
-			value: function onEmailChange(e) {
-				this.setState({ email: e.target.value });
-			}
-		}, {
-			key: 'onPhoneChange',
-			value: function onPhoneChange(e) {
-				this.setState({ phone: e.target.value });
-			}
-		}, {
-			key: 'onCreateCustomer',
-			value: function onCreateCustomer() {
-				console.log('yes');
-				console.log(this.props.params.customerId);
-				fetch('/api/customers/', {
-					method: 'post',
-					headers: {
-						"Content-type": "application/json; charset=UTF-8"
-					},
-					body: (0, _stringify2.default)({
-						firstName: this.state.firstName,
-						lastName: this.state.lastName,
-						email: this.state.email,
-						phone: this.state.phone
-					})
-				}).then(function (response) {
-					console.log(response);
-					return response.json();
-				}).then(function (response) {
-					location = "/#/customers/" + response.id;
-				}).catch(function (err) {
-					console.log(err);
-				});
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'section',
-					null,
-					_react2.default.createElement(
-						'h1',
-						null,
-						'Create / ',
-						_react2.default.createElement(
-							'span',
-							null,
-							' New Customer'
-						)
-					),
-					_react2.default.createElement(
-						'form',
-						null,
-						_react2.default.createElement(
-							'div',
-							{ className: 'form-group' },
-							_react2.default.createElement(
-								'label',
-								null,
-								'First Name:'
-							),
-							_react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.firstName', value: this.state.firstName, onChange: this.onFirstNameChange })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'form-group' },
-							_react2.default.createElement(
-								'label',
-								null,
-								'Last Name:'
-							),
-							_react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.lastName', value: this.state.lastName, onChange: this.onLastNameChange })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'form-group' },
-							_react2.default.createElement(
-								'label',
-								null,
-								'Email:'
-							),
-							_react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.email', value: this.state.email, onChange: this.onEmailChange })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'form-group' },
-							_react2.default.createElement(
-								'label',
-								null,
-								'Phone:'
-							),
-							_react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.phone', value: this.state.phone, onChange: this.onPhoneChange })
-						),
-						_react2.default.createElement(
-							'button',
-							{ type: 'button', className: 'btn btn-primary', onClick: this.onCreateCustomer },
-							'Create Customer'
-						),
-						' ',
-						_react2.default.createElement(
-							'a',
-							{ href: '/#/customers', className: 'btn btn-primary' },
-							'Back'
-						)
-					)
-				);
-			}
-		}]);
-		return CreateCustomer;
+	  (0, _createClass3.default)(CreateCustomer, [{
+	    key: 'onFirstNameChange',
+	    value: function onFirstNameChange(e) {
+	      this.setState({
+	        firstName: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'onLastNameChange',
+	    value: function onLastNameChange(e) {
+	      this.setState({
+	        lastName: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'onEmailChange',
+	    value: function onEmailChange(e) {
+	      this.setState({
+	        email: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'onPhoneChange',
+	    value: function onPhoneChange(e) {
+	      this.setState({
+	        phone: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'onCreateCustomer',
+	    value: function onCreateCustomer() {
+	      fetch('/api/customers/', {
+	        method: 'post',
+	        headers: {
+	          "Content-type": "application/json; charset=UTF-8"
+	        },
+	        body: (0, _stringify2.default)({
+	          firstName: this.state.firstName,
+	          lastName: this.state.lastName,
+	          email: this.state.email,
+	          phone: this.state.phone
+	        })
+	      }).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        location = "/#/customers/" + response.id;
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Create /',
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            'New Customer'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'form',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'First Name:'
+	            ),
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.firstName', value: this.state.firstName, onChange: this.onFirstNameChange })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'Last Name:'
+	            ),
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.lastName', value: this.state.lastName, onChange: this.onLastNameChange })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'Email:'
+	            ),
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.email', value: this.state.email, onChange: this.onEmailChange })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'Phone:'
+	            ),
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.phone', value: this.state.phone, onChange: this.onPhoneChange })
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { type: 'button', className: 'btn btn-primary', onClick: this.onCreateCustomer },
+	            'Create Customer'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            'a',
+	            { href: '/#/customers', className: 'btn btn-primary' },
+	            'Back'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	  return CreateCustomer;
 	}(_react2.default.Component);
 
 	exports.default = CreateCustomer;
@@ -29459,7 +29466,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _stringify = __webpack_require__(327);
@@ -29499,153 +29506,154 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var ViewCustomer = function (_React$Component) {
-		(0, _inherits3.default)(ViewCustomer, _React$Component);
+	  (0, _inherits3.default)(ViewCustomer, _React$Component);
 
-		function ViewCustomer(props) {
-			(0, _classCallCheck3.default)(this, ViewCustomer);
+	  function ViewCustomer(props) {
+	    (0, _classCallCheck3.default)(this, ViewCustomer);
 
-			var _this = (0, _possibleConstructorReturn3.default)(this, (ViewCustomer.__proto__ || (0, _getPrototypeOf2.default)(ViewCustomer)).call(this, props));
+	    var _this = (0, _possibleConstructorReturn3.default)(this, (ViewCustomer.__proto__ || (0, _getPrototypeOf2.default)(ViewCustomer)).call(this, props));
 
-			_this.state = {
-				customer: []
-			};
-			_this.onDeleteCustomer = _this.onDeleteCustomer.bind(_this);
-			return _this;
-		}
+	    _this.state = {
+	      customer: []
+	    };
+	    _this.onDeleteCustomer = _this.onDeleteCustomer.bind(_this);
+	    return _this;
+	  }
 
-		(0, _createClass3.default)(ViewCustomer, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				var _this2 = this;
+	  (0, _createClass3.default)(ViewCustomer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
 
-				fetch('/api/customers/' + this.props.params.customerId).then(function (response) {
-					return response.json();
-				}).then(function (response) {
-					_this2.setState({ customer: response });
-				}).catch(function (err) {
-					console.log(err);
-				});
-			}
-		}, {
-			key: 'onDeleteCustomer',
-			value: function onDeleteCustomer() {
-				console.log('yes');
-				fetch('/api/customers/' + this.props.params.customerId, {
-					method: 'delete',
-					headers: {
-						"Content-type": "application/json; charset=UTF-8"
-					},
-					body: (0, _stringify2.default)({
-						_id: this.props.params.customerId
-					})
-				}).then(function (response) {
-					return response.json();
-				}).then(function (response) {
-					location = "/#/customers/";
-				}).catch(function (err) {
-					console.log(err);
-				});
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'section',
-					null,
-					_react2.default.createElement(
-						'h1',
-						null,
-						this.state.customer.firstName
-					),
-					_react2.default.createElement(
-						'table',
-						{ className: 'table table-striped' },
-						_react2.default.createElement(
-							'thead',
-							null,
-							_react2.default.createElement(
-								'tr',
-								null,
-								_react2.default.createElement(
-									'td',
-									null,
-									'Firstname'
-								),
-								_react2.default.createElement(
-									'td',
-									null,
-									this.state.customer.firstName
-								)
-							),
-							_react2.default.createElement(
-								'tr',
-								null,
-								_react2.default.createElement(
-									'td',
-									null,
-									'Lastname'
-								),
-								_react2.default.createElement(
-									'td',
-									null,
-									this.state.customer.lastName
-								)
-							),
-							_react2.default.createElement(
-								'tr',
-								null,
-								_react2.default.createElement(
-									'td',
-									null,
-									'Email'
-								),
-								_react2.default.createElement(
-									'td',
-									null,
-									this.state.customer.email
-								)
-							),
-							_react2.default.createElement(
-								'tr',
-								null,
-								_react2.default.createElement(
-									'td',
-									null,
-									'Phone'
-								),
-								_react2.default.createElement(
-									'td',
-									null,
-									this.state.customer.phone
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						null,
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: "/customers/" + this.props.params.customerId + "/edit", className: 'btn btn-primary' },
-							'Edit'
-						),
-						' ',
-						_react2.default.createElement(
-							'a',
-							{ className: 'btn btn-primary', onClick: this.onDeleteCustomer },
-							'Delete'
-						),
-						'  ',
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: "/customers/", className: 'btn btn-primary' },
-							'Back'
-						)
-					)
-				);
-			}
-		}]);
-		return ViewCustomer;
+	      fetch('/api/customers/' + this.props.params.customerId).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        _this2.setState({
+	          customer: response
+	        });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'onDeleteCustomer',
+	    value: function onDeleteCustomer() {
+	      fetch('/api/customers/' + this.props.params.customerId, {
+	        method: 'delete',
+	        headers: {
+	          "Content-type": "application/json; charset=UTF-8"
+	        },
+	        body: (0, _stringify2.default)({
+	          _id: this.props.params.customerId
+	        })
+	      }).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        location = "/#/customers/";
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          this.state.customer.firstName
+	        ),
+	        _react2.default.createElement(
+	          'table',
+	          { className: 'table table-striped' },
+	          _react2.default.createElement(
+	            'thead',
+	            null,
+	            _react2.default.createElement(
+	              'tr',
+	              null,
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                'Firstname'
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                this.state.customer.firstName
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'tr',
+	              null,
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                'Lastname'
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                this.state.customer.lastName
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'tr',
+	              null,
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                'Email'
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                this.state.customer.email
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'tr',
+	              null,
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                'Phone'
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                this.state.customer.phone
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: "/customers/" + this.props.params.customerId + "/edit", className: 'btn btn-primary' },
+	            'Edit'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            'a',
+	            { className: 'btn btn-primary', onClick: this.onDeleteCustomer },
+	            'Delete'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: "/customers/", className: 'btn btn-primary' },
+	            'Back'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	  return ViewCustomer;
 	}(_react2.default.Component);
 
 	exports.default = ViewCustomer;
@@ -29657,7 +29665,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _stringify = __webpack_require__(327);
@@ -29697,165 +29705,179 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var EditCustomer = function (_React$Component) {
-		(0, _inherits3.default)(EditCustomer, _React$Component);
+	  (0, _inherits3.default)(EditCustomer, _React$Component);
 
-		function EditCustomer(props) {
-			(0, _classCallCheck3.default)(this, EditCustomer);
+	  function EditCustomer(props) {
+	    (0, _classCallCheck3.default)(this, EditCustomer);
 
-			var _this = (0, _possibleConstructorReturn3.default)(this, (EditCustomer.__proto__ || (0, _getPrototypeOf2.default)(EditCustomer)).call(this, props));
+	    var _this = (0, _possibleConstructorReturn3.default)(this, (EditCustomer.__proto__ || (0, _getPrototypeOf2.default)(EditCustomer)).call(this, props));
 
-			_this.state = {
-				firstName: '',
-				lastName: '',
-				email: '',
-				phone: ''
-			};
+	    _this.state = {
+	      firstName: '',
+	      lastName: '',
+	      email: '',
+	      phone: ''
+	    };
+	    _this.onFirstNameChange = _this.onFirstNameChange.bind(_this);
+	    _this.onLastNameChange = _this.onLastNameChange.bind(_this);
+	    _this.onEmailChange = _this.onEmailChange.bind(_this);
+	    _this.onPhoneChange = _this.onPhoneChange.bind(_this);
+	    _this.onUpdateCustomer = _this.onUpdateCustomer.bind(_this);
+	    return _this;
+	  }
 
-			_this.onFirstNameChange = _this.onFirstNameChange.bind(_this);
-			_this.onLastNameChange = _this.onLastNameChange.bind(_this);
-			_this.onEmailChange = _this.onEmailChange.bind(_this);
-			_this.onPhoneChange = _this.onPhoneChange.bind(_this);
-			_this.onUpdateCustomer = _this.onUpdateCustomer.bind(_this);
-			return _this;
-		}
+	  (0, _createClass3.default)(EditCustomer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
 
-		(0, _createClass3.default)(EditCustomer, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				var _this2 = this;
-
-				fetch('/api/customers/' + this.props.params.customerId).then(function (response) {
-					return response.json();
-				}).then(function (response) {
-					_this2.setState({ firstName: response.firstName });
-					_this2.setState({ lastName: response.lastName });
-					_this2.setState({ email: response.email });
-					_this2.setState({ phone: response.phone });
-					_this2.setState({ id: response.phone });
-				}).catch(function (err) {
-					console.log(err);
-				});
-			}
-		}, {
-			key: 'onFirstNameChange',
-			value: function onFirstNameChange(e) {
-				this.setState({ firstName: e.target.value });
-			}
-		}, {
-			key: 'onLastNameChange',
-			value: function onLastNameChange(e) {
-				this.setState({ lastName: e.target.value });
-			}
-		}, {
-			key: 'onEmailChange',
-			value: function onEmailChange(e) {
-				this.setState({ email: e.target.value });
-			}
-		}, {
-			key: 'onPhoneChange',
-			value: function onPhoneChange(e) {
-				this.setState({ phone: e.target.value });
-			}
-		}, {
-			key: 'onUpdateCustomer',
-			value: function onUpdateCustomer() {
-				console.log('yes');
-				console.log(this.props.params.customerId);
-				fetch('/api/customers/' + this.props.params.customerId, {
-					method: 'put',
-					headers: {
-						"Content-type": "application/json; charset=UTF-8"
-					},
-					body: (0, _stringify2.default)({
-						firstName: this.state.firstName,
-						lastName: this.state.lastName,
-						email: this.state.email,
-						phone: this.state.phone
-					})
-				}).then(function (response) {
-					console.log(response);
-					return response.json();
-				}).then(function (response) {
-					location = "/#/customers/" + response.id;
-				}).catch(function (err) {
-					console.log(err);
-				});
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'section',
-					null,
-					_react2.default.createElement(
-						'h1',
-						null,
-						'Edit / ',
-						_react2.default.createElement(
-							'span',
-							null,
-							this.state.firstName
-						)
-					),
-					_react2.default.createElement(
-						'form',
-						null,
-						_react2.default.createElement(
-							'div',
-							{ className: 'form-group' },
-							_react2.default.createElement(
-								'label',
-								null,
-								'First Name:'
-							),
-							_react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'firstName', value: this.state.firstName, onChange: this.onFirstNameChange })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'form-group' },
-							_react2.default.createElement(
-								'label',
-								null,
-								'Last Name:'
-							),
-							_react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.lastName', value: this.state.lastName, onChange: this.onLastNameChange })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'form-group' },
-							_react2.default.createElement(
-								'label',
-								null,
-								'Email:'
-							),
-							_react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.email', value: this.state.email, onChange: this.onEmailChange })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'form-group' },
-							_react2.default.createElement(
-								'label',
-								null,
-								'Phone:'
-							),
-							_react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.phone', value: this.state.phone, onChange: this.onPhoneChange })
-						),
-						_react2.default.createElement(
-							'button',
-							{ type: 'button', className: 'btn btn-primary', onClick: this.onUpdateCustomer },
-							'Update'
-						),
-						' ',
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: "/customers/" + this.props.params.customerId, className: 'btn btn-primary' },
-							'cancel'
-						)
-					)
-				);
-			}
-		}]);
-		return EditCustomer;
+	      fetch('/api/customers/' + this.props.params.customerId).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        _this2.setState({
+	          firstName: response.firstName
+	        });
+	        _this2.setState({
+	          lastName: response.lastName
+	        });
+	        _this2.setState({
+	          email: response.email
+	        });
+	        _this2.setState({
+	          phone: response.phone
+	        });
+	        _this2.setState({
+	          id: response.phone
+	        });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'onFirstNameChange',
+	    value: function onFirstNameChange(e) {
+	      this.setState({
+	        firstName: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'onLastNameChange',
+	    value: function onLastNameChange(e) {
+	      this.setState({
+	        lastName: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'onEmailChange',
+	    value: function onEmailChange(e) {
+	      this.setState({
+	        email: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'onPhoneChange',
+	    value: function onPhoneChange(e) {
+	      this.setState({
+	        phone: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'onUpdateCustomer',
+	    value: function onUpdateCustomer() {
+	      fetch('/api/customers/' + this.props.params.customerId, {
+	        method: 'put',
+	        headers: {
+	          "Content-type": "application/json; charset=UTF-8"
+	        },
+	        body: (0, _stringify2.default)({
+	          firstName: this.state.firstName,
+	          lastName: this.state.lastName,
+	          email: this.state.email,
+	          phone: this.state.phone
+	        })
+	      }).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        location = "/#/customers/" + response.id;
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Edit /',
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            this.state.firstName
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'form',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'First Name:'
+	            ),
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'firstName', value: this.state.firstName, onChange: this.onFirstNameChange })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'Last Name:'
+	            ),
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.lastName', value: this.state.lastName, onChange: this.onLastNameChange })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'Email:'
+	            ),
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.email', value: this.state.email, onChange: this.onEmailChange })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              null,
+	              'Phone:'
+	            ),
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'customer.phone', value: this.state.phone, onChange: this.onPhoneChange })
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { type: 'button', className: 'btn btn-primary', onClick: this.onUpdateCustomer },
+	            'Update'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: "/customers/" + this.props.params.customerId, className: 'btn btn-primary' },
+	            'cancel'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	  return EditCustomer;
 	}(_react2.default.Component);
 
 	exports.default = EditCustomer;
